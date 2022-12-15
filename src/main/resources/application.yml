@@ -8,12 +8,8 @@ spring:
         - id: users_service
           uri: ${FIRST_SERVICE}
           predicates:
-            - Path=/api/user/**
-#        - id: user_service
-#          uri: https://ticketcinemausersservice.up.railway.app
-#          predicates:
-#            - Path= /tes
-#        - id: secondModule
-#          uri: ${SECOND_SERVICE_HOST}
-#          predicates:
-#            - Path=/second-service/**
+            - Path= /api/user/**
+        - id: films_service
+          uri: ${SECOND_SERVICE}
+          predicates:
+            - Path= /api/film/**
