@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: users_service
+          uri: ${FIRST_SERVICE}
+          predicates:
+            - Path=/api/user/**
+#        - id: user_service
+#          uri: https://ticketcinemausersservice.up.railway.app
+#          predicates:
+#            - Path= /tes
+#        - id: secondModule
+#          uri: ${SECOND_SERVICE_HOST}
+#          predicates:
+#            - Path=/second-service/**
